@@ -14,7 +14,7 @@ alt="License" src="https://img.shields.io/static/v1?label=License&message=MIT&co
 Hi there! Thanks for your attention to our work!🤝
 
 This is the PyTorch code for the **Proactive Infeasibility Prevention (PIP)** 
-framework implemented on POMO.
+framework implemented on [POMO](https://github.com/yd-kwon/POMO), [AM](https://github.com/wouterkool/attention-learn-to-route) and [GFACS](https://github.com/ai4co/gfacs).
 
 PIP is a generic and effective framework to advance the capabilities of 
 neural methods towards more complex VRPs. First, it integrates the Lagrangian 
