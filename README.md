@@ -11,6 +11,10 @@ alt="License" src="https://img.shields.io/static/v1?label=License&message=MIT&co
 
 ---
 
+The code, datasets and pretrained models will be released this week. 
+
+---
+
 Hi there! Thanks for your attention to our work!🤝
 
 This is the PyTorch code for the **Proactive Infeasibility Prevention (PIP)** 
