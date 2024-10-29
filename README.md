@@ -43,6 +43,70 @@ NeurIPS 2024😊. If you find our work useful, please cite:
     year={2024}
 }
 ```
+
+---
+
+## Usage
+
+<details>
+    <summary><strong>Generate data</strong></summary>
+
+For evaluation, you can use our [provided datasets](https://github.com/jieyibi/PIP-constraint/tree/main/data) or generate data by running the following command under the `./POMO+PIP/` directory:
+
+```shell
+# Default: --problem_size=50 --problem="ALL" --hardness="hard"
+python generate_data.py --problem={PROBLEM} --problem_size={PROBLEM_SIZE} --hardness={HARDNESS}
+```
+
+</details>
+
+
+<details>
+    <summary><strong>Baseline</strong></summary>
+
+#### 1. LKH3 
+
+```shell
+# Default: --problem="TSPTW" --datasets="../data/TSPTW/tsptw50_medium.pkl"
+python LKH_baseline.py --problem={PROBLEM} --datasets={DATASET_PATH} -n=10000 -runs=1 -max_trials=10000
+```
+
+
+#### 2. OR-Tool
+```shell
+# Default: --problem="TSPTW" --datasets="../data/TSPTW/tsptw50_medium.pkl"
+python OR-Tools_baseline.py --problem={PROBLEM} --datasets={DATASET_PATH} -n=10000 -timelimit=20 
+# Optional arguments: `--cal_gap --optimal_solution_path={OPTIMAL_SOLUTION_PATH}`
+```
+
+
+
+#### 3. Greedy
+##### 3.1 Greedy-L
+```shell
+# Default: --problem="TSPTW" --datasets="../data/TSPTW/tsptw50_medium.pkl"
+python greedy_parallel.py --problem={PROBLEM} --datasets={DATASET_PATH} --heuristics="length"
+# Optional arguments: `--cal_gap --optimal_solution_path={OPTIMAL_SOLUTION_PATH}`
+```
+
+##### 3.2 Greedy-C
+```shell
+# Default: --problem="TSPTW" --datasets="../data/TSPTW/tsptw50_medium.pkl" 
+python greedy_parallel.py --problem={PROBLEM} --datasets={DATASET_PATH} --heuristics="constraint"
+# Optional arguments: `--cal_gap --optimal_solution_path={OPTIMAL_SOLUTION_PATH}`
+```
+
+</details>
+
+
+<details>
+    <summary><strong>Train & Evaluation</strong></summary>
+
+Please see the README.md files under each backbone for instructions on how to train and evaluate the PIP framework.
+
+</details>
+
+
 ---
 
 ## Acknowledgments
