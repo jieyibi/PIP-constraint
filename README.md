@@ -3,7 +3,7 @@
 <p align="center">
 <a href="https://neurips.cc/Conferences/2024"><img alt="License" src="https://img.shields.io/static/v1?label=NeurIPS'24&message=Vancouver&color=purple&style=flat-square"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://neurips.cc/virtual/2024/poster/95638"><img alt="License" src="https://img.shields.io/static/v1?label=NeurIPS&message=Poster&color=blue&style=flat-square"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href=""><img src="https://img.shields.io/static/v1?label=ArXiv&message=PDF&color=red&style=flat-square" alt="Paper"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://arxiv.org/abs/2410.21066"><img src="https://img.shields.io/static/v1?label=ArXiv&message=PDF&color=red&style=flat-square" alt="Paper"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 <a href=""><img alt="License" src="https://img.shields.io/static/v1?label=Download&message=Slides&color=orange&style=flat-square"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://github.com/jieyibi/PIP-constraint/blob/main/LICENSE"><img 
 alt="License" src="https://img.shields.io/static/v1?label=License&message=MIT&color=rose&style=flat-square"></a>
