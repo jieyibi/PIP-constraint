@@ -98,11 +98,69 @@ python greedy_parallel.py --problem={PROBLEM} --datasets={DATASET_PATH} --heuris
 
 </details>
 
+<details>
+    <summary><strong>POMO+PIP</strong></summary>
+
+Code is not ready yet. It will be available soon.
+
+</details>
 
 <details>
-    <summary><strong>Train & Evaluation</strong></summary>
+    <summary><strong>AM+PIP</strong></summary>
 
-Please see the README.md files under each backbone for instructions on how to train and evaluate the PIP framework.
+## Train
+
+```shell
+# Default: --graph_size=50 --hardness=hard --CUDA_VISIBLE_ID=0
+
+# 1. AM*
+python run.py --graph_size={PROBLEM_SIZE} --hardness={HARDNESS}
+
+# 2. AM* + PIP
+python run.py --graph_size={PROBLEM_SIZE} --hardness={HARDNESS} --generate_PI_mask
+
+# 3. AM* + PIP-D
+python run.py --graph_size={PROBLEM_SIZE} --hardness={HARDNESS} --generate_PI_mask --pip_decoder
+
+# Note: If you want to resume, please add arguments: --pip_checkpoint and --resume
+```
+
+## Evaluation
+
+For evaluation, please download the data or generate datasets first. 
+Pretrained models are provided in the folder `./pretrained/`.
+
+```shell
+# Default: --graph_size=50 --hardness=hard --CUDA_VISIBLE_ID=0
+
+# 1. AM*
+
+# If you want to evaluate on your own dataset,
+python eval.py --datasets={DATASET} --model={MODEL_PATH}
+# Optional: add `--val_solution_path` to calculate optimality gap.
+
+# If you want to evaluate on the provided dataset,
+python eval.py --graph_size={PROBLEM_SIZE} --hardness={HARDNESS} --model={MODEL_PATH}
+
+# 2. AM* + PIP(-D)
+
+# If you want to evaluate on your own dataset,
+python eval.py --datasets={DATASET} --model={MODEL_PATH} --generate_PI_mask
+# Optional: add `--val_solution_path` to calculate optimality gap.
+
+# If you want to evaluate on the provided dataset,
+python eval.py --graph_size={PROBLEM_SIZE} --hardness={HARDNESS} --model={MODEL_PATH} --generate_PI_mask
+
+
+# Please set your own `--eval_batch_size` based on your GPU memory constraint.
+```
+
+</details>
+
+<details>
+    <summary><strong>GFACS+PIP</strong></summary>
+
+Code is not ready yet. It will be available soon.
 
 </details>
 
