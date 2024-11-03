@@ -11,7 +11,7 @@ alt="License" src="https://img.shields.io/static/v1?label=License&message=MIT&co
 
 ---
 
-The code, datasets and pretrained models will be released this week. 
+The codes for POMO+PIP and GFACS+PIP will be released in a few days. 
 
 ---
 
