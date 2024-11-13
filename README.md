@@ -11,10 +11,6 @@ alt="License" src="https://img.shields.io/static/v1?label=License&message=MIT&co
 
 ---
 
-The codes for POMO+PIP and GFACS+PIP will be released in a few days. 
-
----
-
 Hi there! Thanks for your attention to our work!🤝
 
 This is the PyTorch code for the **Proactive Infeasibility Prevention (PIP)** 
@@ -101,7 +97,52 @@ python greedy_parallel.py --problem={PROBLEM} --datasets={DATASET_PATH} --heuris
 <details>
     <summary><strong>POMO+PIP</strong></summary>
 
-Code is not ready yet. It will be available soon.
+## Train
+
+```shell
+# Default: --problem=TSPTW --hardness=hard --problem_size=50 --pomo_size=50 
+
+# 1. POMO*
+python train.py --problem={PROBLEM} --hardness={HARDNESS} --problem_size={PROBLEM_SIZE}
+
+# 2. POMO* + PIP
+python train.py --problem={PROBLEM} --hardness={HARDNESS} --problem_size={PROBLEM_SIZE} --generate_PI_mask
+
+# 3. POMO* + PIP-D
+python train.py --problem={PROBLEM} --hardness={HARDNESS} --problem_size={PROBLEM_SIZE} --generate_PI_mask --pip_decoder
+
+# Note: 
+# 1. If you want to resume, please add arguments: `--checkpoint`, `--pip_checkpoint` and `--resume_path`
+# 2. Please change the arguments `--simulation_stop_epoch` and `--pip_update_epoch` when training PIP-D on N=100
+```
+
+## Evaluation
+
+
+```shell
+# Default: --problem=TSPTW --problem_size=50 --hardness=hard
+
+# 1. POMO*
+
+# If you want to evaluate on your own dataset,
+python test.py --test_set_path={TEST_DATASET} --checkpoint={MODEL_PATH}
+# Optional: add `--test_set_opt_sol_path` to calculate optimality gap.
+
+# If you want to evaluate on the provided dataset,
+python test.py --problem={PROBLEM} --hardness={HARDNESS} --problem_size={PROBLEM_SIZE} --checkpoint={MODEL_PATH}
+
+# 2. POMO* + PIP(-D)
+
+# If you want to evaluate on your own dataset,
+python eval.py --test_set_path={TEST_DATASET} --checkpoint={MODEL_PATH} --generate_PI_mask
+# Optional: add `--test_set_opt_sol_path` to calculate optimality gap.
+
+# If you want to evaluate on the provided dataset,
+python test.py --problem={PROBLEM} --hardness={HARDNESS} --problem_size={PROBLEM_SIZE} --checkpoint={MODEL_PATH} --generate_PI_mask
+
+
+# Please set your own `--aug_batch_size` or `--test_batch_size` (if no augmentation is used) based on your GPU memory constraint.
+```
 
 </details>
 
