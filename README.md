@@ -134,7 +134,7 @@ python test.py --problem={PROBLEM} --hardness={HARDNESS} --problem_size={PROBLEM
 # 2. POMO* + PIP(-D)
 
 # If you want to evaluate on your own dataset,
-python eval.py --test_set_path={TEST_DATASET} --checkpoint={MODEL_PATH} --generate_PI_mask
+python test.py --test_set_path={TEST_DATASET} --checkpoint={MODEL_PATH} --generate_PI_mask
 # Optional: add `--test_set_opt_sol_path` to calculate optimality gap.
 
 # If you want to evaluate on the provided dataset,
