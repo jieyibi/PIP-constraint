@@ -13,7 +13,7 @@ alt="License" src="https://img.shields.io/static/v1?label=License&message=MIT&co
 
 Hi there! Thanks for your attention to our work!🤝
 
-🙋 We will attend NeurIPS'24 in person! Welcome to discuss with us!
+🙋 We will attend NeurIPS'24 in person! Welcome to stop by West Ballroom A-D#6106 and discuss with us! See you in Vancouver, Canada!
 
 This is the PyTorch code for the **Proactive Infeasibility Prevention (PIP)** 
 framework implemented on [POMO](https://github.com/yd-kwon/POMO), [AM](https://github.com/wouterkool/attention-learn-to-route) and [GFACS](https://github.com/ai4co/gfacs).
