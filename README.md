@@ -72,7 +72,7 @@ python LKH_baseline.py --problem={PROBLEM} --datasets={DATASET_PATH} -n=10000 -r
 ```shell
 # Default: --problem="TSPTW" --datasets="../data/TSPTW/tsptw50_medium.pkl"
 python OR-Tools_baseline.py --problem={PROBLEM} --datasets={DATASET_PATH} -n=10000 -timelimit=20 
-# Optional arguments: `--cal_gap --optimal_solution_path={OPTIMAL_SOLUTION_PATH}`
+# Optional arguments: `--cal_gap --opt_sol_path={OPTIMAL_SOLUTION_PATH}`
 ```
 
 
