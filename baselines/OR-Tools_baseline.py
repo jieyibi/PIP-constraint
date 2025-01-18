@@ -9,7 +9,7 @@ from ortools.constraint_solver import pywrapcp
 from ortools.constraint_solver import routing_enums_pb2
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 import pickle
-sys.path.insert(0, "..")  # for utils
+sys.path.insert(0, "../POMO+PIP/")  # for utils
 from utils import check_extension, load_dataset, save_dataset, run_all_in_pool
 
 SPEED = 1.0
