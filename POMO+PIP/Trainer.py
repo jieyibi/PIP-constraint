@@ -748,8 +748,8 @@ class Trainer:
                         pred_LIST = np.append(pred_LIST, probs_sl.detach().cpu().numpy())
                         label_LIST = np.append(label_LIST, label.detach().cpu().numpy())
 
-                # ATTENTION: always generate PI mask during validation
-                generate_PI_mask = True if self.model_params['pip_decoder'] else False
+                # ATTENTION: PIP-D always generate PI mask during validation
+                generate_PI_mask = True if self.model_params['pip_decoder'] else self.trainer_params["generate_PI_mask"]
                 # print(generate_PI_mask)
                 use_predicted_PI_mask = ((not isinstance(use_predicted_PI_mask, bool) or use_predicted_PI_mask==True) or not self.trainer_params["use_real_PI_mask"])
                 state, reward, done, infeasible = env.step(selected,
