@@ -26,7 +26,7 @@ masks, potentially enhancing performance while significantly reducing
 computational costs during training. 
 
 For more details, please see our paper [Learning to Handle Complex 
-Constraints for Vehicle Routing Problems](), which has been accepted at 
+Constraints for Vehicle Routing Problems](https://arxiv.org/pdf/2410.21066), which has been accepted at 
 NeurIPS 2024😊. If you find our work useful, please cite:
 
 ```
