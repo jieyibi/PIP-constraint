@@ -39,6 +39,19 @@ NeurIPS 2024😊. If you find our work useful, please cite:
     year={2024}
 }
 ```
+---
+## How to play with PIP
+You could follow the command below to clone our repo and set up the running environment. 
+
+```
+git clone git@github.com:jieyibi/PIP-constraint.git
+cd PIP-constraint
+conda create -n pip python=3.12
+conda activate pip
+pip3 install torch torchvision torchaudio # Note: Please refer to your CUDA version and the official website of PyTorch!
+pip install matplotlib tqdm pytz scikit-learn tensorflow tensorboard_logger pandas wandb
+```
+
 
 ---
 
