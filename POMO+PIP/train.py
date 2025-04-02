@@ -139,11 +139,11 @@ if __name__ == "__main__":
     parser.add_argument('--seed', type=int, default=2023)
     parser.add_argument('--log_dir', type=str, default="./results")
     parser.add_argument('--no_cuda', action='store_true')
-    parser.add_argument('--gpu_id', type=str, default="2")
+    parser.add_argument('--gpu_id', type=str, default="0")
     parser.add_argument("--multiple_gpu", type=bool, default=False)
     parser.add_argument('--occ_gpu', type=float, default=0., help="occupy (X)% GPU memory in advance, please use sparingly.")
     parser.add_argument('--tb_logger', type=bool, default=True)
-    parser.add_argument('--wandb_logger', type=bool, default=True)
+    parser.add_argument('--wandb_logger', type=bool, default=False)
 
     args = parser.parse_args()
     seed_everything(args.seed)

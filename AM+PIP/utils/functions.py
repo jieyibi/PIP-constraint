@@ -337,6 +337,11 @@ def copy_all_src(dst_root):
         if hasattr(value, '__file__') and value.__file__:
             src_abspath = os.path.abspath(value.__file__)
 
+            # skip non-existent files
+            if not os.path.exists(src_abspath):
+                print(f"[copy_all_src] Warning: {src_abspath} not found. Skipping.")
+                continue
+
             if os.path.commonprefix([home_dir, src_abspath]) == home_dir:
                 dst_filepath = os.path.join(dst_path, os.path.basename(src_abspath))
 
