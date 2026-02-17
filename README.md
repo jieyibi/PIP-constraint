@@ -39,6 +39,9 @@ NeurIPS 2024😊. If you find our work useful, please cite:
     year={2024}
 }
 ```
+
+You may also be interested in our recent work [CaR](https://github.com/jieyibi/CaR-constraint), which was accepted at ICLR 2026. CaR is the first general and efficient constraint-handling framework for either simple or complex constrained VRPs.
+
 ---
 ## How to play with PIP
 You could follow the command below to clone our repo and set up the running environment. 
