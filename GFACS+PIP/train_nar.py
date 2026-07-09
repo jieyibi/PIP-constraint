@@ -15,8 +15,6 @@ from utils import gen_pyg_data, load_val_dataset, gen_instance
 from typing import Tuple, List
 
 import wandb
-wandb.login(key="d7c2a4d107302d1b34184fb17ca47aa6f84055ac")
-
 
 EPS = 1e-10
 T = 5
