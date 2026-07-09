@@ -4,7 +4,7 @@
 
 Train GFACS model for tsptw with `$N` nodes
 ```raw
-$ python train_nar.py $N
+$ python train.py $N
 ```
 
 ### Dataset Generation
