@@ -217,7 +217,6 @@ python eval.py --graph_size={PROBLEM_SIZE} --hardness={HARDNESS} --model={MODEL_
 <details>
     <summary><strong>GFACS+PIP</strong></summary>
 
-Code is not ready yet. It will be available soon.
 
 </details>
 
